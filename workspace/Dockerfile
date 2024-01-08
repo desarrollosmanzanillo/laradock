@@ -1086,7 +1086,7 @@ RUN set -eux; \
       ;elif [ $(php -r "echo PHP_VERSION_ID - PHP_RELEASE_VERSION;") = "70300" ]; then \
         pecl install pdo_sqlsrv-5.9.0 sqlsrv-5.9.0 \
       ;else \
-        pecl install pdo_sqlsrv sqlsrv \
+        pecl install pdo_sqlsrv-5.10.1 sqlsrv-5.10.1 \
       ;fi && \
       echo "extension=pdo_sqlsrv.so" > /etc/php/${LARADOCK_PHP_VERSION}/cli/conf.d/20-pdo_sqlsrv.ini && \
       echo "extension=sqlsrv.so"     > /etc/php/${LARADOCK_PHP_VERSION}/cli/conf.d/20-sqlsrv.ini && \
